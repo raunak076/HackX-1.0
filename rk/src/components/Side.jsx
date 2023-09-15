@@ -14,10 +14,15 @@ import AccessibilityIcon from '@mui/icons-material/Accessibility';
 import QrCodeIcon from '@mui/icons-material/QrCode';
 import BarChartIcon from '@mui/icons-material/BarChart';
 import PieChartIcon from '@mui/icons-material/PieChart';
+import { Link } from 'react-router-dom';
 
 
 const Side = () => {
     const [open,setOpen]=useState(false);
+    const linkStyle = {
+        textDecoration: "none", // Remove underline
+        color: "inherit", // Inherit text color from parent
+      };
   return (
     <>
       <MenuIcon  sx={{display:{xs:"block",sm:'none'}}} />
@@ -25,7 +30,7 @@ const Side = () => {
     flex={1}
     sx={{display:{xs:"none",sm:"block"}}}
     > 
-        <Box m={5} sx={{bgcolor:"",position:"sticky"}}>
+        <Box m={5} sx={{}}>
         <Avatar onClick={()=>setOpen(true)} sx={{width:'100px',height:'100px'}} src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSp-R0lKIghiAnFejDCFWCRBD00wwq7cnXmEw&usqp=CAU" />
     
         <Menu
@@ -48,9 +53,10 @@ const Side = () => {
       </Menu>
         </Box>
         <Box position={'fixed'}>
+            <Link to={"/"} style={linkStyle}>
         <List>
             <ListItem disablePadding>
-            <ListItemButton component="a" href='/'>
+            <ListItemButton component="a">
                 <ListItemIcon>
                 <HomeIcon />
                 </ListItemIcon>
@@ -58,20 +64,24 @@ const Side = () => {
             </ListItemButton>
             </ListItem>
         </List>
+        </Link>
         <Typography variant='p' sx={{position:"relative",float:"left"}}>Inventory</Typography>
         <List>
-            <ListItem disablePadding>
-            <ListItemButton component="a" href='/myprod'>
-                <ListItemIcon>
-                <Inventory2Icon />
-                </ListItemIcon>
-                <ListItemText primary="My Products" />
-            </ListItemButton>
-            </ListItem>
-        </List>
+      <ListItem disablePadding>
+        <Link to="/myprod" style={linkStyle}>
+          <ListItemButton component="a">
+            <ListItemIcon>
+              <Inventory2Icon />
+            </ListItemIcon>
+            <ListItemText primary="My Products" />
+          </ListItemButton>
+        </Link>
+      </ListItem>
+    </List>
+        <Link to={"/manage"} style={linkStyle}>
         <List>
             <ListItem disablePadding>
-            <ListItemButton component="a" href='/manage'>
+            <ListItemButton component="a" >
                 <ListItemIcon>
                 <EditCalendarIcon />
                 </ListItemIcon>
@@ -79,10 +89,12 @@ const Side = () => {
             </ListItemButton>
             </ListItem>
         </List>
+        </Link>
         <Typography variant='p' sx={{position:"relative",float:"left"}}>Data</Typography>
+        <Link to={"/role"} style={linkStyle}>
         <List>
             <ListItem disablePadding>
-            <ListItemButton component="a" href='/role'>
+            <ListItemButton component="a" >
                 <ListItemIcon>
                 <AccessibilityIcon />
                 </ListItemIcon>
@@ -90,9 +102,11 @@ const Side = () => {
             </ListItemButton>
             </ListItem>
         </List>
+        </Link>
+        <Link to={"/qr"} style={linkStyle}>
         <List>
             <ListItem disablePadding>
-            <ListItemButton component="a" href='/qr'>
+            <ListItemButton component="a" >
                 <ListItemIcon>
                 <QrCodeIcon />
                 </ListItemIcon>
@@ -100,10 +114,12 @@ const Side = () => {
             </ListItemButton>
             </ListItem>
         </List>
+        </Link>
         <Typography variant='p' sx={{position:"relative",float:"left"}}>Analysis Graph</Typography>
+        <Link to={"/bar"} style={linkStyle}>
         <List>
             <ListItem disablePadding>
-            <ListItemButton component="a" href='/bar'>
+            <ListItemButton component="a">
                 <ListItemIcon>
                 <BarChartIcon />
                 </ListItemIcon>
@@ -111,9 +127,12 @@ const Side = () => {
             </ListItemButton>
             </ListItem>
         </List>
+        </Link>
+        <Link to={"/pie"} style={linkStyle}>
         <List>
             <ListItem disablePadding>
-            <ListItemButton component="a" href='/'>
+               
+            <ListItemButton component="a" >
                 <ListItemIcon>
                 <PieChartIcon />
                 </ListItemIcon>
@@ -121,6 +140,8 @@ const Side = () => {
             </ListItemButton>
             </ListItem>
         </List>
+        </Link>
+        
         <List>
             <ListItem disablePadding>
             <ListItemButton component="a" href='/'>

@@ -12,15 +12,7 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 
 
 const Feed = () => {
-  const Icon=styled(Box)(({theme})=>({
-    display:'none',
-    gap:'20px',
-    alignItems:'center',
-    [theme.breakpoints.up("sm")]:{
-     display:'flex'
- }
-    
- }))
+  
 
   return (
     <Box className={"feed-main"} p={2}>
@@ -28,12 +20,12 @@ const Feed = () => {
      <Box display={"flex"}  justifyContent={"right"}> 
      <Stack direction={"row"} gap={3}>
       
-      <Badge badgeContent={4}>
-        <NotificationsIcon />
+      <Badge badgeContent={4} color="error">
+      <NotificationsIcon />
       </Badge>
-      <Badge>
-     <NotificationsIcon/>
-     </Badge>
+    
+   
+     
     
      </Stack>
      </Box>

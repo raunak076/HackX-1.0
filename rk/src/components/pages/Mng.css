@@ -7,12 +7,15 @@
 .field{
     flex:0.1;
     text-align: center;
-
+  border: 1px solid black;
+  padding: 5px;
 }
 
 .edit_delete_product{
     flex:0.4;
     text-align: center;
+    border: 1px solid black;
+  padding: 5px;
 }
 
 .all_product{
@@ -24,5 +27,6 @@
 .edit_product{
     flex:0.4;
     text-align: center;
-    
+    border: 1px solid black;
+  padding: 5px;
 }

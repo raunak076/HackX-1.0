@@ -4,6 +4,7 @@ import "./Mng.css";
 import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import VisibilityIcon from '@mui/icons-material/Visibility';
+import Button from '@mui/material/Button'
 
 function Mng() {
     
@@ -30,6 +31,40 @@ function Mng() {
           quantity: 2,
           category: "Gadget",
         },{
+          name: "Product 2",
+          Item: 5,
+          price: 450,
+          quantity: 2,
+          category: "Gadget",
+        },{
+          name: "Product 2",
+          Item: 5,
+          price: 450,
+          quantity: 2,
+          category: "Gadget",
+        },
+        {
+          name: "Product 2",
+          Item: 5,
+          price: 450,
+          quantity: 2,
+          category: "Gadget",
+        },
+        {
+          name: "Product 2",
+          Item: 5,
+          price: 450,
+          quantity: 2,
+          category: "Gadget",
+        },
+        {
+          name: "Product 2",
+          Item: 5,
+          price: 450,
+          quantity: 2,
+          category: "Gadget",
+        },
+        {
           name: "Product 2",
           Item: 5,
           price: 450,
@@ -66,9 +101,18 @@ function Mng() {
       <div className="field">{product.quantity}</div>
       <div className="field">{product.category}</div>
       <div className="edit_product">
+        <Button variant="outlined" color="secondary">
         <VisibilityIcon style={{ margin: "0 15px", color: "blue" }} />
+        </Button>
+        <Button variant="outlined" color="secondary">
         <EditIcon style={{ margin: "0 15px", color: "green" }} />
-        <DeleteIcon style={{ margin: "0 15px", color: "red" }} />
+          </Button>
+          <Button variant="outlined" color="secondary">
+          <DeleteIcon style={{ margin: "0 15px", color: "red" }} />
+          </Button>
+      
+       
+      
       </div>
     </div>
   ))}
