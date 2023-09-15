@@ -1,0 +1,28 @@
+.header_product{
+    display: flex;
+    background-color: whitesmoke;
+    align-items: center;
+
+}
+.field{
+    flex:0.1;
+    text-align: center;
+
+}
+
+.edit_delete_product{
+    flex:0.4;
+    text-align: center;
+}
+
+.all_product{
+    display: flex;
+    background-color: whitesmoke;
+    align-items: center;
+}
+
+.edit_product{
+    flex:0.4;
+    text-align: center;
+    
+}
